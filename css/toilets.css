@@ -1,0 +1,139 @@
+@charset "UTF-8";
+/****---------------^----------------------^---------------*****/
+/* Styles for the document toilets.html. */
+/****---------------_----------------------_---------------*****/
+/* Styles the list containing our toilet address. */
+ #olPlaces {
+     text-align: center;
+     font-size: 1.2em;
+     color:rgba(220,219,219,0.84);
+}
+
+/* Styles the input tag of type text, of class searchBox belonging to a form tag tag. */
+ form.searchBox input[type=text] {
+     padding:10px;
+     font-size:17px;
+     border:1px solid grey;
+     float:left;
+     width:85%;
+     background:#f1f1f1;
+}
+
+.searchBox {
+    display:flex;
+    flex-flow:row wrap;
+    justify-content:center;
+    margin-bottom:10px;
+}
+/* Styles the button tag of class searchBox belonging to a form tag tag. */
+ form.searchBox button {
+     background:#2196F3;
+     color:white;
+     font-size:17px;
+     border:1px solid grey;
+     border-left:none;
+     cursor:pointer;
+}
+
+#rapidSearch {
+    width:5.5%;
+}
+/* Re-styles the button tag of class searchBox belonging to a form tag when it's hovered over. */
+ form.searchBox button:hover {
+     background:#0b7dda;
+}
+/* Clears the searchBox class after some action is taken. */
+ form.searchBox::after {
+     content:"";
+     clear:both;
+     display:table;
+}
+ #olPlaces{
+     list-style: none;
+}
+
+legend {
+    font-weight:bold;
+    text-shadow:4px 4px 8px rgba(0,0,0,0.70);
+}
+ .legends {
+     font-size:1.7em;
+     font-weight:bold;
+     text-align: center;
+}
+ .legends p {
+     color:white;
+}
+ .searchLegends {
+     padding: 20px 0px 20px 0px;
+     display:flex;
+     flex-flow:row wrap;
+     justify-content:center;
+     background:linear-gradient(to bottom, rgba(88,131,160,1) 0%,rgba(0,97,163,1) 50%);
+     width:100%;
+     box-shadow:0px 5px 8px rgba(0,0,0,0.30);
+}
+ .searchLegends p {
+     margin: 20px 7% 20px 7%;
+     color:white;
+     font-size:0.95em;
+}
+ .searchLegends p span{
+     color:#36d12b;
+     font-style:italic;
+}
+
+.utilHead {
+    color:white;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.40);
+}
+.legItem {
+    text-align:center;
+    width:24%;
+    height:auto;
+}
+
+#advanced-open {
+    width:100%;
+    height:25px;
+    font-size:1.1em;
+}
+
+#advanced-location {
+    height:30px;
+    width:38.5%;
+}
+
+#legContainer {
+    margin-top:50px;
+}
+
+#places {
+    margin-top:30px;
+}
+
+#regExBtns { 
+    width:100%;
+    margin:40px 0px 20px 0px;
+}
+
+#advanced {
+    text-align:center;
+}
+
+.asSubmit {
+    width:60%;
+    height:30px;
+    margin-top:5px;
+    font-size:1.1em;
+}
+
+@media screen and (max-width: 820px) {
+    .searchLegends {
+        flex-flow:column wrap;
+    }
+    .legItem {
+        margin:auto;
+        width:95%;
+}
+}

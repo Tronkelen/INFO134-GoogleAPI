@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>(Toilets) Bergen - Travel and Unravel</title>
+        <!-- Page title. -->
+        <meta charset="UTF-8"/>
+        <!-- Charset to be used. -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <!-- Compatbility check for IE. -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Device resolution. -->
+        <script defer src="js/main.js"></script>
+        <!-- JavaScript functions for the navigation. -->
+        <script defer src="js/toiletSearch.js"></script>
+        <!-- JavaScript functions for the map. -->
+        <link rel="stylesheet" href="css/main.css" type="text/css">
+        <!-- General CSS style document. -->
+        <link rel="stylesheet" href="css/toilets.css" type="text/css">
+        <!-- Current page CSS style document. -->
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <!-- Font Awesome. -->
+    </head>
+    <body>
+        <!--- Content Wrapper -->
+        <div id="contentWrapper">
+            <!-- ******************** Head Content ******************** -->
+            <header>
+                <a href="index.html"><img src="media/Preview-squashed.jpg" id="header_pic" alt="header"></a>
+                <!--- Navigation -->
+                <nav>
+                    <!--- Compact Menu Icon -->
+                    <div class="naviconcontainer" id="navIcon">
+                        <div onclick="dropdown(), menuIcon(this), toggleNav()">
+                            <p class="line1"></p>
+                            <p class="line2"></p>
+                            <p class="line3"></p>
+                        </div>
+                    </div>
+                    <!--- Compact Navigation Menu -->
+                    <div id="sideNav" class="sideNav_content">
+                        <a href="index.html">Home</a>
+                        <a href="tourist.html">Tourist Attractions</a>
+                        <a href="toilets.html">Toilets</a>
+                        <a href="playground.html">Playgrounds</a>
+                        <a href="favorite-toilet.html">Favorite Toilet</a>
+                        <a href="restaurant-rating.html">Restaurant Rating</a>
+                        <a href="transportation.html">Transportation</a>
+                    </div>
+                    <!-- ******************** Navigation Menu ******************** -->
+                    <!--- This is the top navigation when there are no menu button. -->
+                    <div class="active_container">
+                        <a href="index.html">Home</a>
+                        <a href="tourist.html">Tourist Attractions</a>
+                        <!-- Active. -->
+                        <a href="toilets.html" id="navActive">Toilets</a>
+                        <a href="playground.html">Playgrounds</a>
+                        <a href="favorite-toilet.html">Favorite Toilet</a>
+                        <a href="restaurant-rating.html">Restaurant Rating</a>
+                        <a href="transportation.html">Transportation</a>
+                    </div>
+                </nav>
+            </header>
+            <!-- ******************** Main Content ******************** -->
+            <div id="mainContent">
+                <!--- Header -->
+                <h3>Toilets in Bergen</h3>
+                <!--- Map -->
+                <div id="map"></div>
+                <div id="regExBtns">
+                    <div class="legends">
+                        <p>Search</p>
+                    </div>
+                    <!--- Search Box -->
+                    <form class="searchBox">
+                        <input type="text" placeholder="Search.." name="search2" id="searchInput">
+                        <button type="button" id="rapidSearch" onclick="rapidSearch(document.getElementById('searchInput').value)"><i class="fa fa-search"></i></button>
+                    </form>
+                    <p style="text-align:center;color:grey;font-size:0.9em;">*Use the legend filter by choosing "category:criteria"<br> Example: "nonneseter utility:handicap gender:male open:monday time:12:00 price:12"</p>
+                    <!--- Search with filters. -->
+                    <form class="searchBox2" style="margin:auto;max-width:50%;">
+                        <br>
+                        <!--- Advanced Search -->
+                        <button  id="advanced-open" name="advanced" type="button" onclick="openAdvanced()">Advanced Search</button>
+                        <div id="advanced" class="hidden" style="width:100%; display:none; color:white;">
+                            <br>
+                    <fieldset style="background:rgba(63,181,91,0.50);">
+                        <legend>Gender</legend>
+                        <input id="female-check" type="checkbox">Female
+                        <input id="male-check" type="checkbox">Male<br>
+                    </fieldset>
+                    <fieldset style="background:rgba(208,95,97,0.50);">
+                        <legend>Utility</legend>
+                        <input id="handicap-check" type="checkbox">Handicap
+                        <input id="nurse-check" type="checkbox">Nursing Room<br>
+                    </fieldset>
+                    <fieldset style="background:rgba(79,65,203,0.50);">
+                        <legend>Price</legend>
+                        Max Price: <input id="max-price" type="number" value="12" min="0" max="12"> NOK <br><br>
+                        <input id="free-check" type="checkbox">Free<br>
+                    </fieldset>
+                    <fieldset style="background:rgba(18,147,219,0.50);">
+                        <legend>Opening hours</legend>
+                        Open on:
+                        <select id="day" name="day">
+                        <option value="NULL" selected="selected"></option>
+                        <option value="monday">Monday</option>
+                        <option value="tuesday">Tuesday</option>
+                        <option value="wednesday">Wednesday</option>
+                        <option value="thursday">Thursday</option>
+                        <option value="friday">Friday</option>
+                        <option value="saturday">Saturday</option>
+                        <option value="sunday">Sunday</option>
+                        </select>
+                        <input id="time" type="time"><br>
+                        <input id="open-check" type="checkbox"> Open now <br>
+                    </fieldset>
+                    <input id="advanced-location" type="search" placeholder="Location..." class="searchInput">
+                    <button name="advanced-search-button" class="asSubmit" type="button" onclick="advancedSearch();">Search</button>
+                    </div>
+                    <!--- Display markers for handicap toilets. -->
+                    </form>
+                </div>
+                <!--- Ordered list of all locations. -->
+                <div id="places" style="margin-right: auto; margin-left: auto;">
+                    <div class="legends">
+                        <p>All Locations</p>
+                    </div>
+                    <hr>
+                    <ul id="olPlaces"></ul>
+                </div>
+                <hr>
+                <!--- Search Area -->
+                <div id="legContainer">
+                <div class="legends">
+                    <p>Search Legends</p>
+                </div>
+                <div class="searchLegends">
+                    <div class="legItem" style="background:rgba(63,181,91,0.50);">
+                    <h2 class="utilHead">Gender</h2>
+                    <p>Male = <span>male, man, men, mann, herre, menn</span></p>
+                    <p>Female = <span>female, woman, ladies, lady, dame</span></p>
+                    </div>
+                    <div class="legItem" style="background:rgba(208,95,97,0.50);">
+                    <h2 class="utilHead">Utility</h2>
+                    <p>Handicap = <span>handicap, wheelchair, funksjonshemmet, rullestol</span></p>
+                    <p>Nursing Room = <span>nursing, stellerom, baby</span></p>
+                    </div>
+                    <div class="legItem" style="background:rgba(79,65,203,0.50);">
+                    <h2 class="utilHead">Price</h2>
+                    <p>Price = <span>free, gratis</span></p>
+                    <p>Price = <span style="color:red">00</span></p>
+                    </div>
+                    <div class="legItem" style="background:rgba(18,147,219,0.50);">
+                    <h2 class="utilHead">Opening hours</h2>
+                    <p>Open = <span>monday, tuesday, wednesday, thursday, friday, saturday, sunday</span></p>
+                    <p>+ Time = <span style="color:red">00:00</span></p>
+                    </div>
+                </div>
+                </div>
+                <!--- Search Result. -->
+                <hr>
+            </div>
+            <!--- Importing map using API Key. -->
+            <!-- ******************** Footer Content ******************** -->
+            <footer class="container_footer">
+                <!--- Mail Icon -->
+                <a href="mailto:uib.no">
+                <span class="fa-stack fa-lg">
+                <i class="fa fa-envelope fa-stack-1x"></i>
+                <i class="fa fa-square-o fa-stack-2x"></i>
+                </span>
+                </a>
+                <!--- Twitter Icon -->
+                <a href="#">
+                <span class="fa-stack fa-lg">
+                <i class="fa fa-twitter fa-stack-1x"></i>
+                <i class="fa fa-square-o fa-stack-2x"></i>
+                </span>
+                </a>
+                <!--- Facebook Icon -->
+                <a href="#">
+                <span class="fa-stack fa-lg">
+                <i class="fa fa-facebook fa-stack-1x"></i>
+                <i class="fa fa-square-o fa-stack-2x"></i>
+                </span>
+                </a>
+                <!--- Copyright tag. -->
+                <p>Copyright &copy;</p>
+                <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCc563RrViPRQWjefWQ00NW2QwSi3iDr7c&callback=loadMap"></script>
+            </footer>
+        </div>
+    </body>
+</html>

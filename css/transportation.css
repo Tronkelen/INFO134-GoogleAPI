@@ -1,0 +1,29 @@
+@charset "utf-8";
+/****---------------^----------------------^---------------*****/
+/* Styles for the document transportation.html. */
+/****---------------_----------------------_---------------*****/
+/* Sets the size of the travelwindow */
+ .travelPlan {
+     margin-top:50px;
+     width:100%;
+     height:800px;
+     margin-right:auto;
+     margin-left:auto;
+}
+/* The mobile travelwindow is hidden until the @media max screen is at 745px */
+ .travelPlan_m {
+     display:none;
+}
+/*-------------- Media Queries --------------*/
+/* Media querie used when the screen is at or under 745px. */
+ @media screen and (max-width: 745px) {
+    /* Changes the Skyss API to compact mode. */
+     .travelPlan {
+         display:none;
+    }
+    /* Changes the travelPlan_m to display as block and be visible. */
+     .travelPlan_m {
+         display:block;
+         height:500px;
+    }
+}

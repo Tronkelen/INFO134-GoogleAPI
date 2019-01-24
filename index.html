@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>(Home) Bergen - Travel and Unravel</title>
+        <!-- Page title. -->
+        <meta charset="UTF-8">
+        <!-- Charset to be used. -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <!-- Compatbility check for IE. -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Device resolution. -->
+        <script defer src="js/main.js"></script>
+        <!-- JavaScript functions for the navigation. -->
+        <link rel="stylesheet" href="css/main.css" type="text/css">
+        <!-- General CSS style document. -->
+        <link rel="stylesheet" href="css/home.css" type="text/css">
+        <!-- Current page CSS style document. -->
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <!-- Font Awesome. -->
+    </head>
+    <body>
+        <!--- Content Wrapper -->
+        <div id="contentWrapper">
+            <!-- ******************** Head Content ******************** -->
+            <header>
+                <!--- Banner -->
+                <a href="index.html"><img src="media/Preview-squashed.jpg" id="header_pic" alt="header"></a>
+                <!--- Navigation -->
+                <nav>
+                    <!--- Compact Menu Icon -->
+                    <div class="naviconcontainer" id="navIcon">
+                        <div onclick="dropdown(), menuIcon(this), toggleNav()">
+                            <p class="line1"></p>
+                            <p class="line2"></p>
+                            <p class="line3"></p>
+                        </div>
+                    </div>
+                    <!--- Compact Navigation Menu -->
+                    <div id="sideNav" class="sideNav_content">
+                        <a href="index.html">Home</a>
+                        <a href="tourist.html">Tourist Attractions</a>
+                        <a href="toilets.html">Toilets</a>
+                        <a href="playground.html">Playgrounds</a>
+                        <a href="favorite-toilet.html">Favorite Toilet</a>
+                        <a href="restaurant-rating.html">Restaurant Rating</a>
+                        <a href="transportation.html">Transportation</a>
+                    </div>
+                    <!-- ******************** Navigation Menu ******************** -->
+                    <!-- This is the top navigation when there are no menu button. -->
+                    <div class="active_container">
+                        <!-- Active. -->
+                        <a href="index.html" id="navActive">Home</a>
+                        <a href="tourist.html">Tourist Attractions</a>
+                        <a href="toilets.html">Toilets</a>
+                        <a href="playground.html">Playgrounds</a>
+                        <a href="favorite-toilet.html">Favorite Toilet</a>
+                        <a href="restaurant-rating.html">Restaurant Rating</a>
+                        <a href="transportation.html">Transportation</a>
+                    </div>
+                </nav>
+            </header>
+            <!-- ******************** Main Content ******************** -->
+            <div class="mainContent" id="mainContent">
+                <!--- Left Content Column -->
+                <div class="left_column">
+                    <div class="fav_img">
+                        <a href="#">
+                            <h3>Fav spots</h3>
+                        </a>
+                        <a href="#"><img src="media/favspots/img1-squashed.jpg" alt="img1" id="fav_img1" class="scale"></a>
+                        <a href="#"><img src="media/favspots/img2-squashed.jpg" alt="img2" id="fav_img2" class="scale"></a>
+                        <a href="#"><img src="media/favspots/img3-squashed.jpg" alt="img3" id="fav_img3" class="scale"></a>
+                        <a href="#"><img src="media/favspots/img4-squashed.jpg" alt="img4" id="fav_img4" class="scale"></a>
+                    </div>
+                </div>
+                <!--- Right Content Column -->
+                <div class="right_column">
+                    <div class="top_hotels">
+                        <a href="#">
+                            <h3>Top hotels</h3>
+                        </a>
+                        <a href="#">Thon Hotel Rosenkrantz<img src="media/hotels/rosenkrantz_bergen.jpg" id="top_1" class="top_hotels scale" alt="top1"></a>
+                        <a href="#">Thon Hotel Bristol<img src="media/hotels/thon-hotel-bristol-bergen.jpg" id="top_2" class="top_hotels scale" alt="top2"></a>
+                        <a href="#">Scandic Bergen City<img src="media/hotels/scandic_bergen_city.jpg" id="top_3" class="top_hotels scale" alt="top3"></a>
+                        <a href="#">Radisson Blue Bryggen<img src="media/hotels/radisson_bergen.jpg" id="top_4" class="top_hotels scale" alt="top4"></a>
+                        <a href="#">Edvard Grieg<img src="media/hotels/IMG_3704B-squashed.jpg" id="top_5" class="top_hotels scale" alt="top5"></a>
+                        <a href="#">Hotel Admiral<img src="media/hotels/hotel_admiral.jpg" id="top_6" class="top_hotels scale" alt="top6"></a>
+                    </div>
+                </div>
+            </div>
+            <!-- ******************** Footer Content ******************** -->
+            <footer class="container_footer">
+                <!--- Mail Icon -->
+                <a href="mailto:uib.no">
+                <span class="fa-stack fa-lg">
+                <i class="fa fa-envelope fa-stack-1x"></i>
+                <i class="fa fa-square-o fa-stack-2x"></i> 
+                </span>
+                </a>
+                <!--- Twitter Icon -->
+                <a href="#">
+                <span class="fa-stack fa-lg">
+                <i class="fa fa-twitter fa-stack-1x"></i>
+                <i class="fa fa-square-o fa-stack-2x"></i>
+                </span>
+                </a>
+                <!--- Facebook Icon -->
+                <a href="#">
+                <span class="fa-stack fa-lg">
+                <i class="fa fa-facebook fa-stack-1x"></i>
+                <i class="fa fa-square-o fa-stack-2x"></i>
+                </span>
+                </a>
+                <!--- Copyright tag. -->
+                <p>Copyright &copy;</p>
+            </footer>
+        </div>
+    </body>
+</html>

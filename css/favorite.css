@@ -1,0 +1,62 @@
+@charset "utf-8";
+/* CSS Document */
+
+#favoritList {
+    margin:20px 0px 5px 0px;
+}
+
+#favoritForm {
+    display:flex;
+    flex-flow:row nowrap;
+}
+
+#favoritForm select {
+    width:85%;
+    font-family: Ariel;
+    font-size:1.2em;
+}
+
+#favoritForm input {
+    width:15%;
+    font-size:1.2em;
+    border:none;
+    padding:0;
+    margin:0;
+    background-color:#3d71b5;
+    color:white;
+}
+
+#delMarkers {
+    width:20%;
+    padding:10px;
+    font-size:1.2em;
+    border:none;
+    margin:0;
+    background-color:#3d71b5;
+    color:white;
+}
+
+#containerDelMark {
+    margin: 20px 0px 50px 0px;
+    text-align:center;
+}
+
+#closestPlay {
+    text-align:center;
+    font-size:1.2em;
+    color:rgba(220,219,219,0.84);
+}
+
+#closestPlay h1 {
+    text-align:center;
+    font-size:1em;
+    color:orange;
+}
+
+#resultBox {
+    text-align:center;
+    color:white;
+    margin:20px 0px 20px 0px;
+    font-style:italic;
+    font-size:1.2em;
+}

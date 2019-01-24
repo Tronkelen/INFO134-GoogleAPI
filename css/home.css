@@ -1,0 +1,109 @@
+@charset "utf-8";
+/****---------------^----------------------^---------------*****/
+/*              Styles for the document index.html.            */
+/****---------------_----------------------_---------------*****/
+
+/*--------- Left Column ---------*/
+
+/* Left column of our main content. */
+.left_column {
+	background-color: lightgray;
+	width: 60%;
+}
+
+/* Style for the class fav_img, the div containing our pictures. */
+.fav_img {
+	display: flex;
+	padding: 10px;
+}
+
+/* Styling for a tag owned by the class fav_img. */
+.fav_img a {
+	text-decoration: none;
+}
+
+/* Styles the fav_imgX ids displayed on the home page. */
+#fav_img1, #fav_img2, #fav_img3, #fav_img4 {
+	height: 300px;
+	width: 49%;
+}
+
+/*--------- Right Column ---------*/
+
+/* Right column of our main content. */
+.right_column {
+	background-color: lightgray;
+	width: 40%
+}
+
+/* Style for the class top_hotels, the div containing our pictures. */
+.top_hotels {
+	flex-direction: column;
+	width: 98%;
+	margin-bottom: 1%;
+	margin-left: 1%;
+}
+
+/* Styling for a tag owned by the class top_hotels. */
+.top_hotels a {
+	text-decoration: none;
+	color: #cf9a3e;
+}
+
+/* Styles the top_X ids displayed on the home page. */
+#top_1, #top_2, #top_3, #top_4, #top_5, #top_6 {
+	height: 75px;
+}
+
+/*--------- Both Columns ---------*/
+
+/* A class to scale the image. */
+.scale {
+	transition: 0.3s;
+ }
+
+/* A class to scale the image when it's hovered. */
+.scale:hover {
+	transform: scale(1.2);
+	transition-delay: 0.3s;
+	box-shadow: 0px 5px 100px 5px black;
+	z-index: 2;
+}
+
+/*-------------- Media Queries --------------*/
+
+/* Media querie used when the screen is at or under 900px. */
+@media screen and (max-width: 900px) {
+    
+    /* Changes the mainContent class to display its elements in a column instead of row. */
+	.mainContent {
+		flex-direction: column;
+	}
+    
+    /* Sets the width of both columns to 100%. */
+	.left_column, .right_column {
+		width: 100%;
+	}
+}
+
+/* Media querie used when the screen is at or under 745px. */
+@media screen and (max-width: 745px) {
+    
+	/* Changes the mainContent class to display its elements in a column instead of row.  */
+	.mainContent {
+		flex-direction: column;
+	}
+    
+    /* Sets the styling of both columns. */
+	.left_column, .right_column {
+		border-bottom-style: solid;
+		border-color: #772323;
+		border-bottom-width: 10px;
+	}
+    
+    /* Lowers the scaling offered by our scale class. */
+	.scale:hover {
+		transform: scale(1.02);
+		box-shadow: 0 2px 10px 2px black;;
+	}
+}

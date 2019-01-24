@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>(Custom Set) Bergen - Travel and Unravel</title>
+        <!-- Page title. -->
+        <meta charset="UTF-8"/>
+        <!-- Charset to be used. -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <!-- Compatbility check for IE. -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Device resolution. -->
+        <script defer src="js/main.js"></script>
+        <!-- JavaScript functions for the navigation. -->
+        <script defer src="js/restaurantRating.js"></script>
+        <!-- JavaScript functions for the table. -->
+        <link rel="stylesheet" href="css/main.css" type="text/css">
+        <!-- General CSS style document. -->
+        <link rel="stylesheet" href="css/restaurant.css" type="text/css">
+        <!-- Current page CSS style document. -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+        <!-- Font Awesome. -->
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <!-- Font Awesome. -->
+    </head>
+    <body>
+        <!--- Content Wrapper -->
+        <div id="contentWrapper">
+            <!-- ******************** Head Content ******************** -->
+            <header>
+                <a href="index.html"><img src="media/Preview-squashed.jpg" id="header_pic" alt="header"></a>
+                <!--- Navigation -->
+                <nav>
+                    <!--- Compact Menu Icon -->
+                    <div class="naviconcontainer" id="navIcon">
+                        <div onclick="dropdown(), menuIcon(this), toggleNav()">
+                            <p class="line1"></p>
+                            <p class="line2"></p>
+                            <p class="line3"></p>
+                        </div>
+                    </div>
+                    <!--- Compact Navigation Menu -->
+                    <div id="sideNav" class="sideNav_content">
+                        <a href="index.html">Home</a>
+                        <a href="tourist.html">Tourist Attractions</a>
+                        <a href="toilets.html">Toilets</a>
+                        <a href="playground.html">Playgrounds</a>
+                        <a href="favorite-toilet.html">Favorite Toilet</a>
+                        <a href="restaurant-rating.html">Restaurant Rating</a>
+                        <a href="transportation.html">Transportation</a>
+                    </div>
+                    <!-- ******************** Navigation Menu ******************** -->
+                    <!--- This is the top navigation when there are no menu button. -->
+                    <div class="active_container">
+                        <a href="index.html">Home</a>
+                        <a href="tourist.html">Tourist attractions</a>
+                        <a href="toilets.html">Toilets</a>
+                        <a href="playground.html">Playgrounds</a>
+                        <a href="favorite-toilet.html">Favorite Toilet</a>
+                        <!-- Active. -->
+                        <a href="restaurant-rating.html" id="navActive">Restaurant Rating</a>
+                        <a href="transportation.html">Transportation</a>
+                    </div>
+                </nav>
+            </header>
+            <!-- ******************** Main Content ******************** -->
+            <div id="mainContent" style="text-align: center;">
+                <!--- Header -->
+                <h3>List of restaurants rated by Mattilsynet.</h3>
+                <div class="searchBox">
+                    <h2>Search the content</h2>
+                    <input type="search" placeholder="Name, address, date, rating..." id="searchField">
+                </div>
+                <ol id="restaurantList">
+                </ol>
+            </div >
+            <div class="adaptTable">
+            <table id="tables">
+                <thead>
+                    <tr>
+                        <th><a href="javascript:columnSort(0,'STRING');">Name</a> </th>
+                        <th><a href="javascript:columnSort(1,'STRING');">Address</a> </th>
+                        <th><a href="javascript:columnSort(2,'DATE');">Date</a> </th>
+                        <th><a href="javascript:columnSort(3,'SCORE');">Routines and Management</a> </th>
+                        <th><a href="javascript:columnSort(4,'SCORE');">Venue and Equipment</a> </th>
+                        <th><a href="javascript:columnSort(5,'SCORE');">Food-handling and Preparation</a> </th>
+                        <th><a href="javascript:columnSort(6,'SCORE');">Labelling and Tracing</a> </th>
+                        <th><a href="javascript:columnSort(7,'SCORE');">Total score</a> </th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                </tbody>
+            </table>
+            </div>
+            <!-- ******************** Footer Content ******************** -->
+            <footer class="container_footer">
+                <!--- Mail Icon -->
+                <a href="mailto:uib.no">
+                <span class="fa-stack fa-lg">
+                <i class="fa fa-envelope fa-stack-1x"></i>
+                <i class="fa fa-square-o fa-stack-2x"></i>
+                </span>
+                </a>
+                <!--- Twitter Icon -->
+                <a href="#">
+                <span class="fa-stack fa-lg">
+                <i class="fa fa-twitter fa-stack-1x"></i>
+                <i class="fa fa-square-o fa-stack-2x"></i>
+                </span>
+                </a>
+                <!--- Facebook Icon -->
+                <a href="#">
+                <span class="fa-stack fa-lg">
+                <i class="fa fa-facebook fa-stack-1x"></i>
+                <i class="fa fa-square-o fa-stack-2x"></i>
+                </span>
+                </a>
+                <!--- Copyright tag. -->
+                <p>Copyright &copy;</p>
+            </footer>
+        </div>
+    </body>
+</html>

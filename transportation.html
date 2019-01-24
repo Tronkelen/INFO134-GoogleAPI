@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>(Transportation) Bergen - Travel and Unravel</title>
+        <!-- Page title. -->
+        <meta charset="UTF-8"/>
+        <!-- Charset to be used. -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <!-- Compatbility check for IE. -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Device resolution. -->
+        <script defer src="js/main.js"></script>
+        <!-- JavaScript functions for the navigation. -->
+        <link rel="stylesheet" href="css/main.css" type="text/css">
+        <!-- General CSS style document. -->
+        <link rel="stylesheet" href="css/transportation.css" type="text/css">
+        <!-- Current page CSS style document. -->
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <!-- Font Awesome. -->
+    </head>
+    <body>
+        <!--- Content Wrapper -->
+        <div id="contentWrapper">
+            <!-- ******************** Head Content ******************** -->
+            <header>
+                <a href="index.html"><img src="media/Preview-squashed.jpg" id="header_pic" alt="header"></a>
+                <!--- Navigation -->
+                <nav>
+                    <!--- Compact Menu Icon -->
+                    <div class="naviconcontainer" id="navIcon">
+                        <div onclick="dropdown(), menuIcon(this), toggleNav()">
+                            <p class="line1"></p>
+                            <p class="line2"></p>
+                            <p class="line3"></p>
+                        </div>
+                    </div>
+                    <!--- Compact Navigation Menu -->
+                    <div id="sideNav" class="sideNav_content">
+                        <a href="index.html">Home</a>
+                        <a href="tourist.html">Tourist Attractions</a>
+                        <a href="toilets.html">Toilets</a>
+                        <a href="playground.html">Playgrounds</a>
+                        <a href="favorite-toilet.html">Favorite Toilet</a>
+                        <a href="restaurant-rating.html">Restaurant Rating</a>
+                        <a href="transportation.html">Transportation</a>
+                    </div>
+                    <!-- ********************* Navigation Menu ******************** -->
+                    <!--- This is the top navigation when there are no menu button. -->
+                    <div class="active_container">
+                        <a href="index.html">Home</a>
+                        <a href="tourist.html">Tourist Attractions</a>
+                        <a href="toilets.html">Toilets</a>
+                        <a href="playground.html">Playgrounds</a>
+                        <a href="favorite-toilet.html">Favorite Toilet</a>
+                        <a href="restaurant-rating.html">Restaurant Rating</a>
+                        <!-- Active. -->
+                        <a href="transportation.html" id="navActive">Transportation</a>
+                    </div>
+                </nav>
+            </header>
+            <!-- ******************** Main Content ******************** -->
+            <div class="mainContent" id="mainContent">
+                <!--- Importing Skyss API using iframe. -->
+                <iframe src="http://reiseplanlegger.skyss.no/scripts/travelmagic/TravelMagicWE.dll" class="travelPlan" id="travelPlan"></iframe>
+                <iframe src="http://reiseplanlegger.skyss.no/scripts/travelmagic/TravelMagicWE.dll?context=wap.xhtml" class="travelPlan_m" id="travelPlanM"></iframe>
+            </div>
+            <!-- ******************** Footer Content ******************** -->
+            <footer class="container_footer">
+                <!--- Mail Icon -->
+                <a href="mailto:uib.no">
+                <span class="fa-stack fa-lg">
+                <i class="fa fa-envelope fa-stack-1x"></i>
+                <i class="fa fa-square-o fa-stack-2x"></i> 
+                </span>
+                </a>
+                <!--- Twitter Icon -->
+                <a href="#">
+                <span class="fa-stack fa-lg">
+                <i class="fa fa-twitter fa-stack-1x"></i>
+                <i class="fa fa-square-o fa-stack-2x"></i>
+                </span>
+                </a>
+                <!--- Facebook Icon -->
+                <a href="#">
+                <span class="fa-stack fa-lg">
+                <i class="fa fa-facebook fa-stack-1x"></i>
+                <i class="fa fa-square-o fa-stack-2x"></i>
+                </span>
+                </a>
+                <!--- Copyright tag. -->
+                <p>Copyright &copy;</p>
+            </footer>
+        </div>
+    </body>
+</html>
